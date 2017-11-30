@@ -1,0 +1,4 @@
+<h1>Switchboard</h1>
+<section *ngFor="let number of [1,2,3,4,5]; let idx = index" [ngClass]="{off: !buttonStatus[idx], on: buttonStatus[idx]}">
+    <p (click)="switchButton(buttonStatus[idx], idx)"><span *ngIf="buttonStatus[idx]">On</span><span *ngIf="!buttonStatus[idx]">Off</span></p>
+</section>
